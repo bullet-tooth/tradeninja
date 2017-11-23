@@ -1,0 +1,27 @@
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    username: postgres
+#    password:
+#    driver-class-name: org.postgresql.Driver
+#
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+##    show-sql: true
+#  output:
+#    ansi:
+#      enabled: always
+#  jackson:
+#    serialization:
+#      INDENT_OUTPUT: true
+#
+#debug: true
+
+
+tradeninja:
+  proxy:
+    hosts:
+      - 'https://bittrex.com/'
+      - 'https://www.bitfinex.com/'

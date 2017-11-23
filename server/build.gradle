@@ -1,0 +1,53 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.0.M6'
+	}
+	repositories {
+		mavenCentral()
+		maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'groovy'
+
+group = 'com.tradeninja'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+}
+
+
+dependencies {
+	compile('org.codehaus.groovy:groovy-all:2.4.12')
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+//	compile('org.springframework.boot:spring-boot-starter-cache')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-hateoas')
+//	compile('org.springframework.retry:spring-retry')
+//	compile('org.springframework.boot:spring-boot-starter-security')
+//	compile('org.springframework.session:spring-session-core')
+	compile('org.springframework.boot:spring-boot-starter-validation')
+	compile('org.springframework.boot:spring-boot-starter-web')
+//	compile('org.springframework.boot:spring-boot-starter-webflux')
+	runtime('org.springframework.boot:spring-boot-devtools')
+	runtime('org.postgresql:postgresql')
+	compileOnly('org.springframework.boot:spring-boot-configuration-processor')
+	compileOnly('org.projectlombok:lombok')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+//	testCompile('io.projectreactor:reactor-test')
+//	testCompile('org.springframework.security:spring-security-test')
+	testCompile('org.hsqldb:hsqldb')
+}
