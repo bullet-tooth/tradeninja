@@ -6,14 +6,17 @@ import './stylus/main.styl'
 import axios from 'axios'
 import App from './App'
 import router from './router'
+import store from './store'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
+axios.defaults.baseURL = 'http://localhost:9090'
 Vue.prototype.$http = axios
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   template: '<App/>',
   components: { App },
