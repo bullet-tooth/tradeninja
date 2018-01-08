@@ -34,12 +34,6 @@
   const APISECRET = ''
   var bittrex = require('node-bittrex-api')
 
-  // eslint-disable-next-line no-unused-vars
-//  const HEADERS = {
-//    'Access-Control-Allow-Origin': '*',
-//    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-//  }
-
   bittrex.options({
     apikey: APIKEY,
     apisecret: APISECRET,

@@ -9,3 +9,9 @@ spring:
 #  jpa:
 #    hibernate:
 #      ddl-auto: validate
+
+tradeninja:
+  proxy:
+    hosts:
+      - 'https://bittrex.com/'
+      - 'https://www.bitfinex.com/'
